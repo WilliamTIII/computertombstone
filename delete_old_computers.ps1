@@ -4,7 +4,7 @@ $Results=@()
 foreach($computer in $computers){
     #pause
     if($computer.lastlogondate -le ((get-date).adddays(-270))){
-        #Move-ADObject -Identity $computer.distinguishedname -TargetPath "OU=Computers,OU=Terminations,DC=SHAMROCKFOODS,DC=com" -WhatIf
+        #Move-ADObject -Identity $computer.distinguishedname -TargetPath "OU=Computers,OU=Terminations,DC=,DC=com" -WhatIf
         $results+=$computer.name
     }
 }
